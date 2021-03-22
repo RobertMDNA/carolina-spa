@@ -1,1 +1,29 @@
-/*** Add your styles here **/
+/** Sociales **/
+.sociales ul {
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+
+.sociales ul li {
+    position: relative;
+    display: inline-block;
+}
+
+.sociales ul li a{
+    color: #e082a8;
+    font-size: 1.6rem;
+    transition: color .3s ease-in-out;
+}
+
+.sociales ul li a:hover{
+    color: #df5e92;
+}
+
+.sociales ul li{
+    margin-right: .8rem;
+}
+
+.sociales ul li:last-of-type{
+    margin-right: 0;
+}
