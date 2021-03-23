@@ -3,14 +3,14 @@ body{
     background-color: #f8f8f8;
 }
 
-h2{
-    font-size: 2.7rem;
+.encabezado{
+    font-size: 2.8rem;
     font-family: 'Lato', sans-serif;
     line-height: 2.4rem;
 }
 
-h2 span{
-    font-size: 3.8rem;
+.encabezado span{
+    font-size: 3.4rem;
     font-family: 'Italianno', cursive;
     color: #e082a8;
 }
@@ -91,4 +91,30 @@ h2 span{
     font-family: 'Lato', sans-serif;
     color: #979797;
     font-size: 1.7rem;
+}
+
+/** Seccion Servicios **/
+.imagen-servicio img{
+    border: 6px solid #fff;
+    transition: transform .3s ease-in-out;
+}
+
+.imagen-servicio img:hover{
+    transform: scale(1.1);
+}
+
+.servicio-info{
+    background-color: #fff;
+    margin-top: -5rem;
+}
+
+.servicio-info .btn-primary{
+    border-radius: 0;
+    border: none;
+    background-color: #e082a8;
+    transition: background-color .3s ease-in-out;
+}
+
+.servicio-info .btn-primary:hover{
+    background-color: #df5e92;
 }
