@@ -57,7 +57,9 @@ body{
 .navbar-light .navbar-brand,
 .navbar-light .navbar-brand:hover{
     font-weight: 600;
-    color: #fff;
+    font-size: 1.6rem;
+    font-family: 'Italianno', cursive;
+    color: #e082a8;
 }
 
 .navegacion_principal{
