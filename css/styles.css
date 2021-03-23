@@ -27,3 +27,36 @@
 .sociales ul li:last-of-type{
     margin-right: 0;
 }
+
+/** Navegacion Principal **/
+.navegacion{
+    background-color: #8ed3cc;
+}
+
+.navbar-light .navbar-toggler{
+    background-color: #fff;
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .navbar-brand:hover{
+    font-weight: 600;
+    color: #fff;
+}
+
+.navegacion_principal{
+    background-image: url(../img/border_horizontal.png),
+                      url(../img/border_horizontal.png);
+    background-repeat: repeat-x;
+    background-position: 0px top, 0px bottom;
+}
+
+.navbar-light .navbar-nav .nav-link{
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 600;
+    transition: color .3s ease-in-out;
+}
+
+.navbar-light .navbar-nav .nav-link:hover{
+    color: #df5e92;
+}
