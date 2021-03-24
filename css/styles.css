@@ -4,6 +4,7 @@ body{
 }
 
 img{
+    max-width: 100%;
     width: 100%;
 }
 
@@ -162,4 +163,28 @@ img{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+}
+
+/** Estilos A Los Productos **/
+.productos .card{
+    border: none;
+}
+
+.productos .card a{
+    text-decoration: none;
+    color: #e082a8;
+}
+
+.productos .card a h4{
+    font-family: 'Lato', sans-serif; 
+}
+
+.productos .card a p{
+    color: #000;
+    font-size: .9rem;
+}
+
+.productos .card .precio{
+    font-size: 1.4rem;
+    color: #979797;
 }
