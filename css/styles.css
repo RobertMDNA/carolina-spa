@@ -217,7 +217,7 @@ img{
 .citas .btn-primary{
     background-color: #8ed3cc;
     border: 0;
-    padding: 1rem 5rem;
+    padding: 1rem 4rem;
     border-radius: 0;
     font-family: 'Lato', sans-serif;
     font-size: 1.2rem;
@@ -228,4 +228,10 @@ img{
 
 .citas .btn-primary:hover{
     background-color: #66aaa3;
+}
+
+/**  Estilos Al Footer **/
+.copyright{
+    color: #979797;
+    font-size: .9rem;
 }
