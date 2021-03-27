@@ -257,3 +257,9 @@ img{
     font-size: 1.2rem;
     line-height: 2.2rem;
 }
+
+/** Estilos Al Sidebar **/
+aside{
+    background-color: #8ed3cc;
+    color: #fff;
+}
