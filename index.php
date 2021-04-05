@@ -1,6 +1,7 @@
 <?php
   include 'templates/header.php'; // incluyendo nuestro header en el archivo index.php
   include 'templates/navbar.php'; // incluyendo nuestro navbar en el archivo index.php
+  include 'inc/funciones.php'; // incluyendo el archivo de funciones.php en index.php
 ?>
 
 <div class="container">
@@ -164,54 +165,27 @@
   </h2>
 
   <div class="row pt-5">
+  <?php
+    $productos = getProducts(4); // llamado a la funcion getProductos alojada en funciones.php
+
+    // mostrando los productos
+    while ($producto = $productos -> fetch_assoc()) {
+  ?>
     <div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
       <div class="card">
-        <a href="#">
-          <img src="./img/producto_mini_01.jpg" class="card-img-top" alt="...">
+        <a href="producto.php?id=<?php echo $producto["id"];?>">
+          <img src="./img/<?php echo $producto["mini_image"];?>" class="card-img-top" alt="...">
           <div class="card-body">
-            <h4 class="card-title text-uppercase text-center">Producto 1</h4>
-            <p class="card-text text-uppercase">Some quick example text to build on the card title and make up the bulk of the card</p>
-            <p class="precio mb-0 lead text-center">$25</p>
+            <h4 class="card-title text-uppercase text-center"><?php echo $producto["name"];?></h4>
+            <p class="card-text text-uppercase"><?php echo $producto["short_description"];?></p>
+            <p class="precio mb-0 lead text-center">$<?php echo $producto["price"];?></p>
           </div>
         </a>
       </div>
     </div>
-    <div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
-      <div class="card">
-        <a href="#">
-          <img src="./img/producto_mini_02.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h4 class="card-title text-uppercase text-center">Producto 2</h4>
-            <p class="card-text text-uppercase">Some quick example text to build on the card title and make up the bulk of the card</p>
-            <p class="precio mb-0 lead text-center">$25</p>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="col-md-6 mb-lg-0 col-lg-3">
-      <div class="card">
-        <a href="#">
-          <img src="./img/producto_mini_03.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h4 class="card-title text-uppercase text-center">Producto 3</h4>
-            <p class="card-text text-uppercase">Some quick example text to build on the card title and make up the bulk of the card</p>
-            <p class="precio mb-0 lead text-center">$25</p>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="col-md-6 mb-lg-0 col-lg-3">
-      <div class="card">
-        <a href="#">
-          <img src="./img/producto_mini_04.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h4 class="card-title text-uppercase text-center">Producto 4</h4>
-            <p class="card-text text-uppercase">Some quick example text to build on the card title and make up the bulk of the card</p>
-            <p class="precio mb-0 lead text-center">$25</p>
-          </div>
-        </a>
-      </div>
-    </div>
+  <?php
+    }
+  ?>
   </div>
 </section>
 
