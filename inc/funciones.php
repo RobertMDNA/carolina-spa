@@ -14,4 +14,20 @@
 
         return $resultado; // retornamos los datos consultados a la base de datos
     }
+
+    // funcion que nos permitira traer la informacion de un producto correspondiente a su id
+    function getProduct($id){
+        include 'conexion_db.php'; // hacemos uso de la db
+
+        try {
+            $sql = "SELECT name, full_image, price, description, short_description FROM productos WHERE id = $id";
+            $resultado = $db -> query($sql);
+        } catch (Exception $e) {
+            echo $e -> getMessage();
+
+            return array(); // siempre es buena idea retornar un arreglo vacio
+        }
+
+        return $resultado;
+    }
 ?>

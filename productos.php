@@ -1,6 +1,7 @@
 <?php
-  include 'templates/header.php'; // incluyendo nuestro header en el archivo index.php
-  include 'templates/navbar.php'; // incluyendo nuestro navbar en el archivo index.php
+  include 'templates/header.php'; // incluyendo nuestro header en el archivo productos.php
+  include 'templates/navbar.php'; // incluyendo nuestro navbar en el archivo productos.php
+  include 'inc/funciones.php'; // incluyendo las funciones.php en el archivo productos.php
 ?>
 
 <div class="container pt-4">
@@ -20,104 +21,29 @@
 
     <div class="row no-gutters">
       <div class="card-columns">
+      <?php
+        $productos = getProducts(8); // llamado a la funcion getProductos alojada en funciones.php
+
+        // mostrando los productos
+        while ($producto = $productos -> fetch_assoc()) {
+      ?>
         <div class="card">
-          <a href="./producto.html">
-            <img src="./img/producto_mini_01.jpg" alt="" class="card-img-top img-fluid">
+          <a href="producto.php?id=<?php echo $producto["id"];?>">
+            <img src="./img/<?php echo $producto["mini_image"];?>" alt="" class="card-img-top img-fluid">
             <div class="card-body">
               <h3 class="card-title text-center text-uppercase">
-                Producto 1
+              <?php echo $producto["name"];?>
               </h3>
-              <p class="card-text text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum vero et vel aspernatur. Modi doloribus dolor, sequi aspernatur suscipit</p>
-              <p class="precio lead text-center mb-0">$25</p>
+              <p class="card-text text-center"><?php echo $producto["short_description"];?></p>
+              <p class="precio lead text-center mb-0">$<?php echo $producto["price"];?></p>
             </div>
           </a>
         </div><!-- card -->
-        <div class="card">
-          <a href="#">
-            <img src="./img/producto_mini_02.jpg" alt="" class="card-img-top img-fluid">
-            <div class="card-body">
-              <h3 class="card-title text-center text-uppercase">
-                Producto 2
-              </h3>
-              <p class="card-text text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum vero et vel aspernatur. Modi doloribus dolor, sequi aspernatur suscipit</p>
-              <p class="precio lead text-center mb-0">$25</p>
-            </div>
-          </a>
-        </div><!-- card -->
-        <div class="card">
-          <a href="#">
-            <img src="./img/producto_mini_03.jpg" alt="" class="card-img-top img-fluid">
-            <div class="card-body">
-              <h3 class="card-title text-center text-uppercase">
-                Producto 3
-              </h3>
-              <p class="card-text text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum vero et vel aspernatur. Modi doloribus dolor, sequi aspernatur suscipit</p>
-              <p class="precio lead text-center mb-0">$25</p>
-            </div>
-          </a>
-        </div><!-- card -->
-        <div class="card">
-          <a href="#">
-            <img src="./img/producto_mini_04.jpg" alt="" class="card-img-top img-fluid">
-            <div class="card-body">
-              <h3 class="card-title text-center text-uppercase">
-                Producto 4
-              </h3>
-              <p class="card-text text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum vero et vel aspernatur. Modi doloribus dolor, sequi aspernatur suscipit</p>
-              <p class="precio lead text-center mb-0">$25</p>
-            </div>
-          </a>
-        </div><!-- card -->
-        <div class="card">
-          <a href="#">
-            <img src="./img/producto_mini_05.jpg" alt="" class="card-img-top img-fluid">
-            <div class="card-body">
-              <h3 class="card-title text-center text-uppercase">
-                Producto 5
-              </h3>
-              <p class="card-text text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum vero et vel aspernatur. Modi doloribus dolor, sequi aspernatur suscipit</p>
-              <p class="precio lead text-center mb-0">$25</p>
-            </div>
-          </a>
-        </div><!-- card -->
-        <div class="card">
-          <a href="#">
-            <img src="./img/producto_mini_06.jpg" alt="" class="card-img-top img-fluid">
-            <div class="card-body">
-              <h3 class="card-title text-center text-uppercase">
-                Producto 6
-              </h3>
-              <p class="card-text text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum vero et vel aspernatur. Modi doloribus dolor, sequi aspernatur suscipit</p>
-              <p class="precio lead text-center mb-0">$25</p>
-            </div>
-          </a>
-        </div><!-- card -->
-        <div class="card">
-          <a href="#">
-            <img src="./img/producto_mini_07.jpg" alt="" class="card-img-top img-fluid">
-            <div class="card-body">
-              <h3 class="card-title text-center text-uppercase">
-                Producto 7
-              </h3>
-              <p class="card-text text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum vero et vel aspernatur. Modi doloribus dolor, sequi aspernatur suscipit</p>
-              <p class="precio lead text-center mb-0">$25</p>
-            </div>
-          </a>
-        </div><!-- card -->
-        <div class="card">
-          <a href="#">
-            <img src="./img/producto_mini_08.jpg" alt="" class="card-img-top img-fluid">
-            <div class="card-body">
-              <h3 class="card-title text-center text-uppercase">
-                Producto 8
-              </h3>
-              <p class="card-text text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum vero et vel aspernatur. Modi doloribus dolor, sequi aspernatur suscipit</p>
-              <p class="precio lead text-center mb-0">$25</p>
-            </div>
-          </a>
-        </div><!-- card -->
-      </div>
-    </div>
+      <?php
+        }
+      ?>
+      </div><!-- card-columns -->
+    </div><!-- rows -->
   </div>
 </div>
 
