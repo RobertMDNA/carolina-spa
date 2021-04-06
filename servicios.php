@@ -1,4 +1,6 @@
 <?php
+  $titulo = 'Servicios';
+
   include 'templates/header.php'; // incluyendo nuestro header en el archivo index.php
   include 'templates/navbar.php'; // incluyendo nuestro navbar en el archivo index.php
 ?>
@@ -81,16 +83,7 @@
   </div>
 </div>
 
-<div class="citas container-fluid py-5">
-  <div class="row justify-content-center">
-    <div class="col-md-8 col-lg-6 text-center">
-      <h3 class="text-uppercase">Realiza Una Cita</h3>
-      <p class="my-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae architecto incidunt suscipit reprehenderit accusamus nemo nostrum facere exercitationem dolor, deleniti.</p>
-      <a href="#" class="btn btn-primary">Leer Más</a>
-    </div>
-  </div>
-</div>
-
 <?php
+  include 'templates/citas.php'; // incluyendo template citas a servicios.php
   include 'templates/footer.php'; // incluyendo nuestro footer en el archivo index.php
 ?>

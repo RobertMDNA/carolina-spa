@@ -1,4 +1,6 @@
 <?php
+  $titulo = 'Productos';
+
   include 'templates/header.php'; // incluyendo nuestro header en el archivo productos.php
   include 'templates/navbar.php'; // incluyendo nuestro navbar en el archivo productos.php
   include 'inc/funciones.php'; // incluyendo las funciones.php en el archivo productos.php

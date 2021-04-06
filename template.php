@@ -1,4 +1,6 @@
 <?php
+  $titulo = 'Nombre aquí';
+
   include 'templates/header.php'; // incluyendo nuestro header en el archivo index.php
   include 'templates/navbar.php'; // incluyendo nuestro navbar en el archivo index.php
 ?>

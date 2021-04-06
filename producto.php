@@ -8,7 +8,7 @@
       header('Location: 404.html'); // en caso de que no exista un id de tipo int - se reedireccionara a la pagina 404
     }
   }
-
+  $titulo = 'Producto';
   include 'templates/header.php'; // incluyendo nuestro header en el archivo index.php
   include 'templates/navbar.php'; // incluyendo nuestro navbar en el archivo index.php
   include 'inc/funciones.php'; // incluyendo las funciones.php en el archivo producto.php
