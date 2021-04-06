@@ -7,20 +7,25 @@
         <div class="container">
             <div class="collapse navbar-collapse w-100" id="navbarNav">
                 <ul class="navbar-nav nav-justified w-100 flex-column flex-sm-row">
-                    <li class="nav-item">
-                        <a class="nav-link" href="./">Inicio</a>
+                    <?php
+                        // mostrandole al usuario en que parte de nuestra navegacion se encuentra
+                        $archivo = basename($_SERVER['PHP_SELF']);
+                        $pagina = str_replace('.php', '', $archivo);
+                    ?>
+                    <li class="nav-item <?php echo 'index' === $pagina ? 'activo' : '';?>">
+                        <a class="nav-link" href="index.php">Inicio</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./nosotros.php">Nosotros</a>
+                    <li class="nav-item <?php echo 'nosotros' === $pagina ? 'activo' : '';?>">
+                        <a class="nav-link" href="nosotros.php">Nosotros</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./servicios.php">Servicios</a>
+                    <li class="nav-item <?php echo 'servicios' === $pagina ? 'activo' : '';?>">
+                        <a class="nav-link" href="servicios.php">Servicios</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./productos.php">Productos</a>
+                    <li class="nav-item <?php echo 'productos' === $pagina ? 'activo' : '';?>">
+                        <a class="nav-link" href="productos.php">Productos</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./contacto.php">Contacto</a>
+                    <li class="nav-item <?php echo 'contacto' === $pagina ? 'activo' : '';?>">
+                        <a class="nav-link" href="contacto.php">Contacto</a>
                     </li>
                 </ul>
             </div>
